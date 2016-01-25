@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <title>Sealious Admin Panel.</title>
+    <title>Sealious admin panel</title>
     <meta http-equiv="Content-Type" content="charset=utf-8" />
     <link href="img/fav.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/fonts.css" type="text/css">
@@ -16,22 +16,25 @@
     <aside>
         <div id="logo"></div>
         <div id="navigation">
-            <a class="button" href=""><span class="icon-th-list"></span> dashboard</a>
-            <a class="button" href=""><span class="icon-signal"></span> charts</a>
-            <a class="button" href=""><span class="icon-user"></span> users</a>
-            <a class="button" href=""><span class="icon-tags"></span> resources</a>
-            <a class="button" href=""><span class="icon-envelope"></span> mailing service</a>
-            <a class="button" href=""><span class="icon-star-empty"></span> plugins</a>
-            <a class="button" href=""><span class="icon-flag"></span> updates</a>
-            <a class="button" href=""><span class="icon-time"></span> backups</a>
-            <a class="button" href=""><span class="icon-pencil"></span> logs</a>
-            <a class="button" href=""><span class="icon-list-alt"></span> settings</a>
-            <a class="button" href=""><span class="icon-repeat"></span> restart server</a>
+            <a class="button active" href="index.html"><span class="icon-th-list"></span> dashboard</a>
+            <a class="button" href="charts.html"><span class="icon-signal"></span> charts</a>
+            <a class="button" href="users.html"><span class="icon-user"></span> users</a>
+            <a class="button" href="resources.html"><span class="icon-tags"></span> resources</a>
+            <a class="button" href="mailing.html"><span class="icon-envelope"></span> mailing service</a>
+            <a class="button" href="plugins.html"><span class="icon-star-empty"></span> plugins</a>
+            <a class="button" href="updates.html"><span class="icon-flag"></span> updates</a>
+            <a class="button" href="backups.html"><span class="icon-download"></span> backups</a>
+            <a class="button" href="logs.html"><span class="icon-pencil"></span> logs</a>
+            <a class="button" href="rest.html"><span class="icon-book"></span> rest app</a>
+            <a class="button" href="settings.html"><span class="icon-list-alt"></span> settings</a>
+            <a class="button" href="restart.html"><span class="icon-repeat"></span> restart server</a>
         </div>
     </aside>
     <div id="main">
-        <div id="title-bar">
-            Sealious admin panel / dashboard
+        <div id="nav-bar">
+        	<div id="title">
+            	Sealious admin panel / dashboard
+        	</div>
         </div>
         <div id="content">
             <div class="flex-start">
@@ -40,16 +43,7 @@
                     <div class="item-information">
                         <div class="item-title">Users</div>
                         <div class="item-number">
-                            32145
-                        </div>
-                    </div>
-                </div>
-                <div class="panel item flex-start">
-                    <div class="item-icon"><span class="icon-tags"></span></div>
-                    <div class="item-information">
-                        <div class="item-title">Resources</div>
-                        <div class="item-number">
-                            3
+                            <span class="count">27</span><span> / 2133</span>
                         </div>
                     </div>
                 </div>
@@ -63,15 +57,17 @@
                     </div>
                 </div>
                 <div class="panel item flex-start">
-                    <div class="item-icon"><span class="icon-lock"></span></div>
+                    <div class="item-icon"><span class="icon-time"></span></div>
                     <div class="item-information">
-                        <div class="item-title">Active sessions</div>
+                        <div class="item-title">Uptime</div>
                         <div class="item-number">
-                            17
+                            Mon Jan 25 17:28:19 2016
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="flex-start">
+            	
             <div class="panel item">
                 <div class="item-title">Last 10 operations</div>
                 <table>
@@ -79,6 +75,7 @@
                         <tr>
                             <td>Time</td>
                             <td>Operation</td>
+                            <td>Status</td>
                             <td>Result</td>
                             <td>From</td>
                         </tr>
@@ -86,116 +83,83 @@
                     <tbody>
                         <tr>
                             <td>17:40:45.160</td>
-                            <td class="success">POST /logout</td>
+                            <td><div class="dot success"></div>POST /logout</td>
+                            <td>200</td>
                             <td>success!</td>
                             <td>164.127.108.141</td>
                         </tr>
                         <tr>
                             <td>17:40:45.160</td>
-                            <td class="warn">Killing session</td>
+                            <td><div class="dot"></div>Killing session</td>
+                            <td>200</td>
                             <td>9fe3b0ed70ed9ffe2af0877b78891fb1727a38ca</td>
                             <td>164.127.108.141</td>
                         </tr>
                         <tr>
                             <td>17:40:42.979</td>
-                            <td class="success">DELETE /api/v1/places/14kjj8aqcu</td>
+                            <td><div class="dot success"></div>DELETE /api/v1/places/14kjj8aqcu</td>
+                            <td>204</td>
                             <td>success!</td>
                             <td>164.127.108.141</td>
                         </tr>
                         <tr>
                             <td>17:40:39.370</td>
-                            <td class="success">POST /api/v1/places</td>
+                            <td><div class="dot success"></div>POST /api/v1/places</td>
+                            <td>201</td>
                             <td>success!</td>
                             <td>164.127.108.141</td>
                         </tr>
                         <tr>
                             <td>17:40:33.408</td>
-                            <td class="success">PATCH /api/v1/places/dyfwjst0yh</td>
+                            <td><div class="dot success"></div>PATCH /api/v1/places/dyfwjst0yh</td>
+                            <td>200</td>
                             <td>success!</td>
                             <td>164.127.108.141</td>
                         </tr>
                         <tr>
                             <td>17:40:20.119</td>
-                            <td class="success">GET /api/v1/places</td>
+                            <td><div class="dot success"></div>GET /api/v1/places</td>
+                            <td>200</td>
                             <td>success!</td>
                             <td>164.127.108.141</td>
                         </tr>
                         <tr>
                             <td>17:40:19.639</td>
-                            <td class="success">POST /login</td>
+                            <td><div class="dot success"></div>POST /login</td>
+                            <td>200</td>
                             <td>success!</td>
                             <td>164.127.108.141</td>
                         </tr>
                         <tr>
                             <td>17:33:13.638</td>
-                            <td class="error">GET /api/v1/users/me</td>
+                            <td><div class="dot error"></div>GET /api/v1/users/me</td>
+                            <td>403</td>
                             <td>failed - You need to log in first.</td>
                             <td>164.127.108.141</td>
                         </tr>
                         <tr>
                             <td>04:29:39.214</td>
-                            <td class="error">POST /login</td>
+                            <td><div class="dot error"></div>POST /login</td>
+                            <td>401</td>
                             <td>failed - Wrong username or password!</td>
                             <td>188.33.222.175</td>
                         </tr>
                         <tr>
                             <td>03:33:57.933</td>
-                            <td class="info">Killing session</td>
+                            <td><div class="dot info"></div>Killing session</td>
+                            <td>200</td>
                             <td>77aa4e0d522b10c941c90c0241256356f7b18351</td>
                             <td>188.33.222.175</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            </div>
         </div>
+
     </div>
 </body>
 
 </html>
-<!-- 
-04:29:39.214 - error: 	POST /login
-			from: 188.33.222.175, mime: application/x-www-form-urlencoded
-			result: failed - Wrong username or password!
-Error: Wrong username or password!
 
-17:33:13.638 - error: 	GET /api/v1/users/me
-			from: 164.127.108.141, mime: null
-			result: failed - You need to log in first.
-Error: You need to log in first.
-    at new SealiousErrors.Error (/home/Placetag/node_modules/sealious/lib/response/error.js:6:12)
-    at new SealiousErrors.UnauthorizedRequest (/home/Placetag/node_modules/sealious/lib/response/error.js:76:12)
-    at www_server.route.handler (/home/Placetag/node_modules/sealious-www-server/use/channel.www_server.js:125:10)
-    at new_handler (/home/Placetag/node_modules/sealious-www-server/define/channel.www_server.js:151:13)
-    at Object.internals.handler (/home/Placetag/node_modules/sealious-www-server/node_modules/hapi/lib/handler.js:93:36)
-    at /home/Placetag/node_modules/sealious-www-server/node_modules/hapi/lib/handler.js:28:23
-    at internals.Protect.run (/home/Placetag/node_modules/sealious-www-server/node_modules/hapi/lib/protect.js:56:5)
-    at exports.execute (/home/Placetag/node_modules/sealious-www-server/node_modules/hapi/lib/handler.js:22:22)
-    at /home/Placetag/node_modules/sealious-www-server/node_modules/hapi/lib/request.js:370:13
-    at iterate (/home/Placetag/node_modules/sealious-www-server/node_modules/hapi/node_modules/items/lib/index.js:35:13)
-    at done (/home/Placetag/node_modules/sealious-www-server/node_modules/hapi/node_modules/items/lib/index.js:27:25)
-    at /home/Placetag/node_modules/sealious-www-server/node_modules/hapi/node_modules/hoek/lib/index.js:841:22
-    at doNTCallback0 (node.js:419:9)
-    at process._tickDomainCallback (node.js:389:13)
-17:40:19.639 - info: 	POST /login
-			from: 164.127.108.141, mime: application/x-www-form-urlencoded
-			result: success!
-17:40:20.119 - info: 	GET /api/v1/places
-			from: 164.127.108.141, mime: null
-			result: success!
-17:40:26.070 - info: 	POST /api/v1/places
-			from: 164.127.108.141, mime: multipart/form-data
-			result: success!
-17:40:33.408 - info: 	PATCH /api/v1/places/dyfwjst0yh
-			from: 164.127.108.141, mime: multipart/form-data
-			result: success!
-17:40:39.370 - info: 	POST /api/v1/places
-			from: 164.127.108.141, mime: multipart/form-data
-			result: success!
-17:40:42.979 - info: 	DELETE /api/v1/places/14kjj8aqcu
-			from: 164.127.108.141, mime: application/json
-			result: success!
-17:40:45.160 - info: Killing session:  58f9e6549989747ba708f46f223b9289e63cc993
-17:40:45.160 - info: 	POST /logout
-			from: 164.127.108.141, mime: application/x-www-form-urlencoded
-			result: success!
- -->
+5.196.26.106

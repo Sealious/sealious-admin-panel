@@ -1,10 +1,10 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    text-rendering: optimizelegibility;
-    font-smooth: auto;
-    -webkit-font-smoothing: auto;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	text-rendering: optimizelegibility;
+	font-smooth: auto;
+	-webkit-font-smoothing: auto;
 }
 
 article,
@@ -19,105 +19,123 @@ main,
 nav,
 section,
 summary {
-    display: block;
+	display: block;
 }
 
 body {
-    font-family: 'Open Sans', 'Liberation Sans', 'Nimbus Sans L', 'Trebuchet MS', 'Arial';
-    font-weight: 200;
-    color: #555;
-    background-color: #E7E7E7;
+	font-family: 'Open Sans', 'Liberation Sans', 'Nimbus Sans L', 'Trebuchet MS', 'Arial';
+	font-weight: 200;
+	color: #555;
+	background-color: #E7E7E7;
 }
 
 .wrapper {
-    max-width: 50rem;
-    margin: 0 auto;
-    /*background-color: #FFF;*/
+	max-width: 50rem;
+	margin: 0 auto;
+	/*background-color: #FFF;*/
 }
 
 aside {
-    /*background-color: hsl(181, 61%, 28%);*/
-    background-color: #63595C;
-    position: absolute;
-    width: 10rem;
-    height: 100%;
+	/*background-color: hsl(181, 61%, 28%);*/
+	background-color: #63595C;
+	position: fixed;
+	width: 10rem;
+	height: 100%;
 }
 
 #logo {
-    background-image: url("../img/logo/icon.svg");
-    width: 8.6rem;
-    height: 2rem;
-    /*background-size: cover;*/
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+	background-image: url("../img/logo/icon.svg");
+	width: 8.6rem;
+	height: 2rem;
+	/*background-size: cover;*/
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }
 
 a {
-    text-decoration: none !important;
-    transition: all 200ms;
+	text-decoration: none !important;
+	transition: all 200ms;
 }
 
 .button {
-    font-size: 0.9rem;
-    vertical-align: middle;
-    padding: 1rem;
-    /*background-color: hsl(125, 41%, 58%);	*/
-    color: hsl(96, 86%, 100%);
-    font-family: "Open Sans Regular";
+	font-size: 0.9rem;
+	vertical-align: middle;
+	padding: 1rem;
+	/*background-color: hsl(125, 41%, 58%);	*/
+	color: hsl(96, 86%, 100%);
+	font-family: "Open Sans Regular";
 }
 
 .button:hover {
-    color: #FFF;
-    background-color: hsl(125, 21%, 48%);
+	color: #FFF;
+	background-color: hsl(125, 21%, 48%);
+}
+
+.active {
+	background-color: hsl(342, 5%, 46%);
 }
 
 #navigation {
-    flex-direction: column;
-    display: flex;
+	flex-direction: column;
+	display: flex;
 }
 
 #main {
-    margin-left: 10rem;
-    /*background-color: hsl(219, 33%, 97%);*/
+	margin-left: 10rem;
+	/*background-color: hsl(219, 33%, 97%);*/
 }
 
-#title-bar {
-    height: 4rem;
-    /*background-color: #F8F8FA;*/
-    background-color: #FFF;
-    border-bottom: 1px solid #e0e4e8;
-    color: #777;
-    padding: 1rem;
-    font-size: 1.4rem;
-    font-family: 'Open Sans';
+#nav-bar {
+	position: fixed;
+	background-color: #FFF;
+	height: 4rem;
+	width: 100%;
+}
+
+#nav-bar #title {
+	height: 4rem;
+	background-color: #FFF;
+	border-bottom: 1px solid #e0e4e8;
+	color: #777;
+	padding: 1rem;
+	font-size: 1.4rem;
+	font-family: 'Open Sans';
 }
 
 #content {
-    padding: 1rem;
+	padding-top: 4rem;
+	/*padding: 1rem;*/
+	padding-left: 1rem;
 }
 
 .panel {
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 0.2rem;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    padding: 1rem;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 0.2rem;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	padding: 1rem;
 }
 
 .flex-start {
-    /* padding-bottom: 3rem; */
-    display: -webkit-flex;
-    -webkit-flex-wrap: wrap;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
+	/* padding-bottom: 3rem; */
+	display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
 }
+
+
+/*------------------------------------------*/
+
+
+/*dashboard*/
 
 .item {
 	/*width: 12rem;*/
@@ -125,45 +143,54 @@ a {
 	/*margin: 1rem;*/
 	margin-right: 1rem;
 	margin-top: 1rem;
-	padding-right: 2rem;
+	/* padding-right: 2rem; */
 }
 
-.item .item-icon{
-	/*color: #63595C;*/
-	color:  hsl(175, 31%, 68%);
+.item .item-icon {
+	color: hsl(342, 5%, 56%);
+	/*color:  hsl(175, 31%, 68%);*/
 	font-size: 3rem;
 }
 
-.item .item-information{
+.item .item-information {
 	padding-left: 0.5rem;
 }
 
-.item .item-title{
+.item .item-title {
 	font-size: 1.4rem;
 }
 
-.item .item-number{
+.item .item-number {
 	font-size: 1rem;
 }
 
-table{
+.item .item-number p {
+	display: inline;
+}
+
+.count {
+	color: hsl(111, 22%, 38%);
+}
+
+table {
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	/* margin-bottom: 1rem; */
 	border: 1px dashed #ddd;
 	padding: 0.5rem;
 	border-collapse: collapse;
 	word-break: break-all
 }
 
-thead{
+thead {
 	border: 1px dashed #ddd;
 }
 
-tr:nth-child(odd){
-	background-color: #F5F5F5;
-}
 
-td{
+/*tr:nth-child(odd){
+	background-color: #F5F5F5;
+}*/
+
+td {
 	border-left: 1px dashed #ddd;
 	border-bottom: 1px dashed #ddd;
 	padding: 0.5rem;
@@ -171,19 +198,45 @@ td{
 	/* white-space: pre; */
 }
 
-.error{
-	background-color: hsl(15, 77%, 88%);
+.dot {
+	width: 0.7rem;
+	display: inline-block;
+	height: 0.7rem;
+	border-radius: 50%;
+	/* margin-left: 0.2rem; */
+	vertical-align: baseline;
+	margin-right: 0.4rem;
+	background-color: hsl(342, 5%, 56%);
 }
 
-.warn{
-	background-color: hsl(45, 77%, 88%);
+.error {
+	background-color: hsl(10, 47%, 58%);
 }
 
-.success{
-	background-color: hsl(111, 77%, 88%);
+.warn {
+	background-color: hsl(35, 41%, 75%);
 }
 
-.info{
-	background-color: hsl(188, 77%, 88%);
+.success {
+	background-color: hsl(121, 41%, 75%);
 }
 
+
+/*---------------------------------------*/
+/*charts*/
+
+.chart {
+	margin-top: 1rem;
+	padding: 1rem;
+	border-left: 1px dashed #ddd;
+	border-bottom: 1px dashed #ddd;
+}
+
+/*---------------------------------------*/
+/*logs*/
+
+pre{
+	padding-top: 1rem;
+	font-family: "monospace";
+	font-size: 0.8rem;
+}
